@@ -1,2 +1,4 @@
-westga\edu\Lab01\App.class
 westga\edu\Lab01\Main.class
+main\java\westga\edu\Lab01\model\ShoppingItem.class
+westga\edu\Lab01\App.class
+main\java\westga\edu\Lab01\model\ShoppingList.class
