@@ -3,9 +3,9 @@ package main.java.westga.edu.Lab01.model;
 public class ShoppingItem {
 	
 	private String itemName;
-	private double itemPrice;
+	private String itemPrice;
 	
-	public ShoppingItem(String itemName, double itemPrice) {
+	public ShoppingItem(String itemName, String itemPrice) {
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
 		
@@ -15,8 +15,12 @@ public class ShoppingItem {
 		return this.itemName;
 	}
 	
-	public double getItemPrice() {
+	public String getItemPrice() {
 		return this.itemPrice;
+	}
+	
+	public String toString() {
+		return this.getItemName() + " $" + this.getItemPrice();
 	}
 	
 }

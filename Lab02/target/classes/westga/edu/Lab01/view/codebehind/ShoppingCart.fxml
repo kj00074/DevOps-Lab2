@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.westga.edu.Lab01.view.codebehind.ShoppingCartWindow">
+   <children>
+      <Button fx:id="addButton" layoutX="36.0" layoutY="127.0" mnemonicParsing="false" onAction="#addItemToCart" text="Add" />
+      <Label fx:id="ShpItem" layoutX="14.0" layoutY="24.0" prefHeight="17.0" prefWidth="98.0" text="Shopping Item " />
+      <TextField fx:id="ItmTextField" layoutX="63.0" layoutY="49.0" prefHeight="25.0" prefWidth="106.0" />
+      <Button fx:id="removeBtn" layoutX="108.0" layoutY="127.0" mnemonicParsing="false" text="Remove" />
+      <TextArea fx:id="cartTxtArea" layoutX="38.0" layoutY="165.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="17.0" layoutY="53.0" prefHeight="17.0" prefWidth="38.0" text="Name" />
+      <Label fx:id="priceLabel" layoutX="17.0" layoutY="91.0" text="Price" />
+      <TextField fx:id="priceTxtField" layoutX="64.0" layoutY="87.0" prefHeight="25.0" prefWidth="106.0" />
+   </children>
+</AnchorPane>
