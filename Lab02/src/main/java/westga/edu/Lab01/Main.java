@@ -16,7 +16,7 @@ import javafx.scene.Scene;
  */
 public class Main extends Application {
 	
-	public static final String WINDOW_TITLE = "Shopping Cart";
+	public static final String WINDOW_TITLE = "Kyron Joseph Shoppping Cart";
 	public static final String GUI_RESOURCE = "view/codebehind/ShoppingCart.fxml";
 	
 	

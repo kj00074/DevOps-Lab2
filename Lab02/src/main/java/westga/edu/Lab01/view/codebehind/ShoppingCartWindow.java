@@ -15,8 +15,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import main.java.westga.edu.Lab01.model.ShoppingItem;
+import main.java.westga.edu.Lab01.model.ShoppingList;
+import java.util.ArrayList;
 
 public class ShoppingCartWindow {
+	
+	ShoppingList myList = new ShoppingList();
 
     @FXML
     private TextField ItmTextField;
@@ -34,21 +38,49 @@ public class ShoppingCartWindow {
     private Button removeBtn;
 	
 	@FXML
-    private Label priceLabel;
+    private Label quanLabel;
 
     @FXML
-    private TextField priceTxtField;
+    private TextField quanTxtField;
 	
 	@FXML
 	public void addItemToCart(ActionEvent event) {
 		
 		String itemName = this.ItmTextField.getText();
-		String itemPrice = this.priceTxtField.getText();
-		ShoppingItem myItem = new ShoppingItem(itemName, itemPrice);
+		ShoppingItem myItem = new ShoppingItem(itemName);
 		
-		String result = myItem.toString();
+		this.myList.addItem(myItem);
+		
+		
+		String result = this.myList.toString();
 		
 		this.cartTxtArea.setText(result);
 	
 	}
+	
+	@FXML
+	public void removeItemName(ActionEvent event) {
+		String itemName = this.ItmTextField.getText();
+		ShoppingItem myItem = new ShoppingItem(itemName);
+		
+		this.myList.removeItem(myItem);
+		
+		String result = this.myList.toString();
+		
+		this.cartTxtArea.setText(result);
+	}
+	
+	@FXML
+	public void addQuantity(ActionEvent event) {
+		String amount = this.quanTxtField.getText();
+		int quantity = Integer.parseInt(amount);
+		
+		String itemName = this.ItmTextField.getText();
+		ShoppingItem myItem = new ShoppingItem(itemName);
+		
+		this.myList.updateQuantity(myItem, quantity);
+		
+		
+	}
+	
 }
